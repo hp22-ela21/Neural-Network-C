@@ -1,5 +1,5 @@
 /**************************************************************************************************
-* ann.h: Innehåller funktionalitet för implementering av neurala nätverk innehållande multipla
+* ann.h: InnehÃ¥ller funktionalitet fÃ¶r implementering av neurala nÃ¤tverk innehÃ¥llande multipla
 *        dense-lager via strukten ann samt motsvarande externa funktioner.
 **************************************************************************************************/
 #ifndef ANN_H_
@@ -13,15 +13,15 @@
 #include "training_data.h"
 
 /**************************************************************************************************
-* ann: Implementering av ett neuralt nätverk innehållande ett ingångslager, valfritt antal
-*      dolda lager samt ett yttre lager. Antalet noder i respektive lager är valbart.
+* ann: Implementering av ett neuralt nÃ¤tverk innehÃ¥llande ett ingÃ¥ngslager, valfritt antal
+*      dolda lager samt ett yttre lager. Antalet noder i respektive lager Ã¤r valbart.
 **************************************************************************************************/
 struct ann
 { 
    struct dense_layer output_layer;         /* Yttre lager. */
-   struct dense_layer_vector hidden_layers; /* Fält innehållande dolda lager. */
-   struct training_data training_data;      /* Behållare för träningsdata. */
-   const struct double_vector* input_layer; /* Pekare till insignaler i ingångslagret. */
+   struct dense_layer_vector hidden_layers; /* FÃ¤lt innehÃ¥llande dolda lager. */
+   struct training_data training_data;      /* BehÃ¥llare fÃ¶r trÃ¤ningsdata. */
+   const struct double_vector* input_layer; /* Pekare till insignaler i ingÃ¥ngslagret. */
    size_t num_inputs;                       /* Antalet insignaler. */
    size_t num_outputs;                      /* Antalet utsignaler. */
 };
@@ -53,6 +53,6 @@ double* ann_predict(struct ann* self,
                     const struct double_vector* input);
 void ann_predict_range(struct ann* self, 
                        const struct double_2d_vector* inputs, 
-                       FILE* stream);
+                       FILE* ostream);
 
 #endif /* ANN_H_ */
