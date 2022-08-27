@@ -1,5 +1,5 @@
 /**************************************************************************************************
-* double_2d_vector.h: Implementering av tvÂdimensionella vektorer innehÂllande flyttal via
+* double_2d_vector.h: Implementering av tv√•dimensionella vektorer inneh√•llande flyttal via
 *                     strukten double_2d_vector samt motsvarande externa funktioner.
 **************************************************************************************************/
 #ifndef DOUBLE_2D_VECTOR_H_
@@ -10,13 +10,13 @@
 #include "double_vector.h"
 
 /**************************************************************************************************
-* double_2d_vector: TvÂdimensionellt dynamiskt f‰lt fˆr lagring av flyttal. Antalet element
-*                   som lagras i f‰ltet r‰knas upp och uttrycks i form av vektorns storlek.
+* double_2d_vector: Tv√•dimensionellt dynamiskt f√§lt f√∂r lagring av flyttal. Antalet element
+*                   som lagras i f√§ltet r√§knas upp och uttrycks i form av vektorns storlek.
 **************************************************************************************************/
 struct double_2d_vector
 {
-   struct double_vector* data; /* Pekare till multipla dynamiska f‰lt. */
-   size_t size;                /* Antalet element i f‰ltet. */
+   struct double_vector* data; /* Pekare till multipla dynamiska f√§lt. */
+   size_t size;                /* Antalet element i f√§ltet. */
 };
 
 /* Externa funktioner: */
@@ -26,7 +26,7 @@ struct double_2d_vector* double_2d_vector_ptr_new(const size_t size);
 void double_2d_vector_ptr_delete(struct double_2d_vector** self);
 int double_2d_vector_resize(struct double_2d_vector* self,   
                             const size_t new_size);
-int  double_2d_vector_push(struct double_2d_vector* self, 
+int double_2d_vector_push(struct double_2d_vector* self, 
                            const struct double_vector* new_element);
 int double_2d_vector_pop(struct double_2d_vector* self);
 void double_2d_vector_print(const struct double_2d_vector* self, 
